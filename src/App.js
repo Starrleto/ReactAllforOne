@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {} from 'react-bootstrap';
+import { OffcanvasHeader } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
@@ -9,7 +9,19 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import InputComponent from './components/InputComponent';
+import HomePageComponent from './components/HomePageComponent';
+import SayHelloComponent from './components/SayHelloComponent';
+import MagicEightComponent from './components/MagicEightComponent';
+import OddEvenComponent from './components/OddEvenComponent';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import ReverseLetterComponent from './components/ReverseLetterComponent';
+import ReverseNumComponent from './components/ReverseNumComponent';
+import RestarauntPickerComponent from './components/RestarauntPickerComponent';
+import AddNumsComponent from './components/AddNumsComponent';
+import CompareComponent from './components/CompareComponent';
+import AskingComponent from './components/AskingComponent';
+import MadlibComponent from './components/AskingComponent';
 
 function App() {
 
@@ -24,41 +36,23 @@ function App() {
 
   return (
     <>
+  
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<HomePageComponent></HomePageComponent>}/>
+      <Route path='pageTwo' element={<SayHelloComponent></SayHelloComponent>}/>
+      <Route path='magic' element={<MagicEightComponent></MagicEightComponent>}></Route>
+      <Route path='oddeven' element={<OddEvenComponent></OddEvenComponent>}></Route>
+      <Route path='reversenum' element={<ReverseNumComponent></ReverseNumComponent>}></Route>
+      <Route path='reverseword' element={<ReverseLetterComponent></ReverseLetterComponent>}></Route>
+      <Route path='restaraunt' element={<RestarauntPickerComponent></RestarauntPickerComponent>}></Route>
+      <Route path='add' element={<AddNumsComponent></AddNumsComponent>}></Route>
+      <Route path='compare' element={<CompareComponent></CompareComponent>}></Route>
+      <Route path='ask' element={<AskingComponent></AskingComponent>}></Route>
+      <Route path='madlibs' element={<MadlibComponent></MadlibComponent>}></Route>
+    </Routes>
+  </BrowserRouter>
 
-  <Navbar expand="lg" className="bg-body-tertiary flex">
-        <Container>
-          <Navbar.Brand href="#home">ALL FOR ONE</Navbar.Brand>
-            <Button variant="primary" onClick={handleShow} className="d-md-block d-lg-none">
-            Open APIs
-            </Button>
-        </Container>
-        <Container>
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav activeKey="/home">
-                <Nav.Link variant="primary" onClick={handleShow}>Open APIs</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-  </Navbar>
-
-    <div className="center">
-      <p className="wow">Hi</p>
-
-      <div>
-        <Button variant="primary" onClick={handleShow}>
-          Open APIs
-        </Button>
-      </div>
-    </div>
-
-      <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <Button variant="primary">Primary</Button>{' '}
-        </Offcanvas.Body>
-      </Offcanvas>
     </>
   );
 }
