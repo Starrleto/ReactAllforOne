@@ -92,7 +92,7 @@ const [count, setCount] = useState(0);
                 <Button variant="list" as={Link} to={'add'}>Adding</Button>
                 <Button variant="list" as={Link} to={'ask'}>Asking Questions</Button>
                 <Button variant="list" as={Link} to={'compare'}>Greater or Less</Button>
-                <Button variant="list" as={Link} to={'oddeven'}>MadLib</Button>
+                <Button variant="list" as={Link} to={'madlibs'}>MadLib</Button>
                 <Button variant="list" as={Link} to={'oddeven'}>Odd or Even</Button>
                 <Button variant="list" as={Link} to={'reverseword'}>Reverse Letters</Button>
                 <Button variant="list" as={Link} to={'reversenum'}>Reverse Numbers</Button>

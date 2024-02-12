@@ -16,7 +16,7 @@ import Form from 'react-bootstrap/Form';
 import { madlibs } from '../services/DataServices';
 
 
-export default function MadlibComponent() {
+export default function MadlibsComponent() {
 
 const [show, setShow] = useState(false);
 const handleClose = () => setShow(false);
@@ -40,7 +40,12 @@ const getResult = async() => {
         return;
     }
     const promise = await madlibs(numOne, numTwo, num3, num4, num5, num6, num7, num8, num9, num10);
-    setResult(promise);
+    let result = "";
+    
+    promise.forEach(element => {
+        result+= element+" ";
+    });
+    setResult(result);
 }
 
   return (

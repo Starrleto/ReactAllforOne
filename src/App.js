@@ -22,6 +22,7 @@ import AddNumsComponent from './components/AddNumsComponent';
 import CompareComponent from './components/CompareComponent';
 import AskingComponent from './components/AskingComponent';
 import MadlibComponent from './components/AskingComponent';
+import MadlibsComponent from './components/MadlibsComponent';
 
 function App() {
 
@@ -49,7 +50,7 @@ function App() {
       <Route path='add' element={<AddNumsComponent></AddNumsComponent>}></Route>
       <Route path='compare' element={<CompareComponent></CompareComponent>}></Route>
       <Route path='ask' element={<AskingComponent></AskingComponent>}></Route>
-      <Route path='madlibs' element={<MadlibComponent></MadlibComponent>}></Route>
+      <Route path='madlibs' element={<MadlibsComponent></MadlibsComponent>}></Route>
     </Routes>
   </BrowserRouter>
 
